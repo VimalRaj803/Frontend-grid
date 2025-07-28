@@ -46,7 +46,9 @@ body{
     font-weight: 400;
 }
 .grid-box{
-    padding: 1rem;
+    animation:appear;
+/*     padding: 1rem; */
+    padding:auto;
     max-width: 1400px;
     min-height:100vh;
     margin: 1rem;
@@ -187,6 +189,7 @@ body{
 @media (max-width:1024px) {
     .grid-box{
         grid-auto-rows: initial;
+        padding:1rem;
         grid-template-areas: 
            'box1 box1 box2 box2'
            'box1 box1 box2 box2'
@@ -210,7 +213,7 @@ body{
 
 @media (max-width:768px) {
     .grid-box{
-        padding:0.2rem;
+        padding:0.3rem;
         grid-template-areas: 
            'box2'
            'box5'
@@ -315,4 +318,19 @@ body{
            .grid-box .item:nth-child(8) img{
              width:60%
            }
+}
+@keyframes appear {
+      from{
+    opacity: 0;
+    scale: 0.5;
+   }  
+   to{
+    opacity: 1;
+    scale: 1;
+   }
+}
+.item{
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
 }
