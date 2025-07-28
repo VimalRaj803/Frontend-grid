@@ -210,6 +210,7 @@ body{
 
 @media (max-width:768px) {
     .grid-box{
+        padding:0.5rem;
         grid-template-areas: 
            'box2'
            'box5'
@@ -270,7 +271,7 @@ body{
        }
         .grid-box .item:nth-child(4) img{
             height: 350px;
-            width: 65%;
+            width: 75%;
         }
          .grid-box .item:nth-child(5) .med-text{
             padding-top: 8rem;
